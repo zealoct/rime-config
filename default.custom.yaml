@@ -13,6 +13,16 @@ patch:
       Caps_Lock: none
       Shift_L: commit_code
 
+  recognizer/patterns/eng: "[A-Za-z]*[-_+]+"
+
+  key_binder:
+    bindings:
+      __patch:
+        - key_bindings:/emacs_editing
+        - key_bindings:/move_by_word_with_tab
+        - key_bindings:/paging_with_comma_period
+        - key_bindings:/numbered_mode_switch
+
   punctuator/full_shape:
     __include: punctuation:/full_shape
     '/' : ／
@@ -22,3 +32,5 @@ patch:
     __include: punctuation:/half_shape
     '/' : '/'
     '\' : 、
+    '_' : '_'
+    '^' : [ …… , —— ]
