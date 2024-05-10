@@ -20,5 +20,5 @@ patch:
 
   punctuator/half_shape:
     __include: punctuation:/half_shape
-    '/' : '/'gst
+    '/' : '/'
     '\' : 、
