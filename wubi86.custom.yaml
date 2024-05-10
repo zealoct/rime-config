@@ -1,0 +1,26 @@
+patch:
+  punctuator/import_preset: default
+
+  # translator/preedit_format: []
+  schema/dependencies: double_pinyin_mspy
+  # schema/dependencies: stroke
+
+  recognizer/patterns/reverse_lookup: "^rlup`[a-z]*'?$"
+  reverse_lookup/prefix: "rlup`"
+  # 双拼反查
+  reverse_lookup/dictionary: luna_pinyin
+  reverse_lookup/prism: double_pinyin_mspy
+  reverse_lookup/preedit_format: []
+  reverse_lookup/tips: 〔双拼〕
+  # 笔划反查
+  # reverse_lookup/dictionary: stroke
+  # reverse_lookup/preedit_format: "xlit/hspnz/一丨丿丶乙/"
+  # reverse_lookup/tips: 〔笔划〕
+
+
+__patch:
+# Rx: emoji:customize:schema=double_pinyin_mspy {
+  - patch/+:
+      __include: emoji_suggestion:/patch
+  # - patch/unctuator/full_shape/+: "/" : [ / ]
+# }

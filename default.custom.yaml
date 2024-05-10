@@ -1,0 +1,24 @@
+patch:
+  schema_list:
+    - schema: luna_pinyin          # 朙月拼音
+    - schema: double_pinyin_mspy   # 微軟雙拼
+    - schema: wubi86               # 五笔字型
+
+  menu:
+    page_size: 10
+
+  ascii_composer:
+    good_old_caps_lock: false
+    switch_key:
+      Caps_Lock: none
+      Shift_L: commit_code
+
+  punctuator/full_shape:
+    __include: punctuation:/full_shape
+    '/' : ／
+    '\' : 、
+
+  punctuator/half_shape:
+    __include: punctuation:/half_shape
+    '/' : '/'gst
+    '\' : 、

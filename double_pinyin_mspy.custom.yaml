@@ -1,0 +1,13 @@
+patch:
+  translator/preedit_format: []
+
+  recognizer/patterns/reverse_lookup: "^rlup`[a-z]*'?$"
+
+  reverse_lookup/prefix: "rlup`"
+
+__patch:
+# Rx: emoji:customize:schema=double_pinyin_mspy {
+  - patch/+:
+      __include: emoji_suggestion:/patch
+  # - patch/unctuator/full_shape/+: "/" : [ / ]
+# }
