@@ -1,0 +1,3 @@
+patch:
+  recognizer/patterns/reverse_lookup: "^rlup`[a-z]*'?$"
+  reverse_lookup/prefix: "rlup`"
